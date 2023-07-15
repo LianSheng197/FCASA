@@ -34,4 +34,5 @@
 
 
 ### Reference
-The application icon is download from [Emoji Island - New Thinking Emoji](https://emojiisland.com/products/new-thinking-emoji)
+- This Project Repository: [LianSheng197/FCASA](https://github.com/LianSheng197/FCASA)
+- The application icon is download from [Emoji Island - New Thinking Emoji](https://emojiisland.com/products/new-thinking-emoji)
