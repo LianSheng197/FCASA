@@ -31,3 +31,7 @@
     ```sh
     python src/main.py
     ```
+
+
+### Reference
+The application icon is download from [Emoji Island - New Thinking Emoji](https://emojiisland.com/products/new-thinking-emoji)

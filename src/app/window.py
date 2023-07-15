@@ -1,11 +1,18 @@
 import tkinter as tk
 import tkinter.font as tkFont
+import pathlib
+import numpy as np
 from tkinter.filedialog import askopenfilename
 from video import Video
+from PIL import ImageTk, Image
 
 
 class App:
     def __init__(self, root):
+        srcPath = pathlib.Path(__file__).parent.parent.resolve()
+        iconPath = srcPath.joinpath("assets/icon.png")
+        root.iconphoto(False, tk.PhotoImage(file=iconPath))
+
         root.title("FCASA")
         width = 520
         height = 420
