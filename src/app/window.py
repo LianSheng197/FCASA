@@ -8,7 +8,7 @@ from PIL import ImageTk, Image
 
 
 class App:
-    def __init__(self, root):
+    def __init__(self, root: tk.Tk):
         srcPath = pathlib.Path(__file__).parent.parent.resolve()
         iconPath = srcPath.joinpath("assets/icon.png")
         root.iconphoto(False, tk.PhotoImage(file=iconPath))
@@ -95,6 +95,7 @@ class App:
         self.ptA: tuple[int, int] = (0, 0)
         self.ptB: tuple[int, int] = (0, 0)
         self.videoObject: Video
+        self.image: ImageTk.PhotoImage
 
         self.updateStatus()
 
@@ -125,19 +126,22 @@ class App:
                     "#ff0000",
                 )
             else:
+                self.image = self.videoObject.getFirstFrame(self.labPreview.winfo_width(), self.labPreview.winfo_height())
+                
+                self.labPreview.config(image=self.image)
                 self.updateStatus()
 
     def doReset(self):
         self.selectedFilePath = ""
-        self.labPreview
+        self.labPreview.config(image="")
 
     def doSetAPoint(self):
         print("command")
 
-    def doStart(self):
+    def doSetBPoint(self):
         print("command")
 
-    def doSetBPoint(self):
+    def doStart(self):
         print("command")
 
     def updateStatus(self, message: str = "Ready", colorHex: str = "#000000"):
