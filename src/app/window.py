@@ -3,7 +3,7 @@ import tkinter.font as tkFont
 import pathlib
 import numpy as np
 from tkinter.filedialog import askopenfilename
-from video import Video
+from app.video import Video
 from PIL import ImageTk, Image
 
 
@@ -149,9 +149,4 @@ class App:
 
         if colorHex != "":
             self.labStatus["fg"] = colorHex
-
-
-if __name__ == "__main__":
-    root = tk.Tk()
-    app = App(root)
-    root.mainloop()
+            
